@@ -392,7 +392,7 @@ class MainForm(npyscreen.FormBaseNew):
         filter_val = self.filter_input.value.strip()
         self.apply_filter(filter_val)
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description="Slack navigator", prog="slacknav")
     parser.add_argument(
         "--report", required=True, help="Delay file to parse", type=str
@@ -404,3 +404,6 @@ if __name__ == '__main__':
 
     app = MainApp(args.report, args.output)
     app.run()
+
+if __name__ == '__main__':
+    main()
